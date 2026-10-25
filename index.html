@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sum Using Reduce</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .container {
+            background: white;
+            max-width: 450px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #0002;
+        }
+
+        h1 {
+            color: #2563eb;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .result {
+            color: #15803d;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Array Sum Using Reduce()</h1>
+
+        <p>Array: [10, 20, 30, 40, 50]</p>
+
+        <button onclick="calculateSum()">Calculate Sum</button>
+
+        <p>Output:</p>
+        <div class="result" id="result">Click the button</div>
+    </div>
+
+    <script>
+        function calculateSum() {
+            const numbers = [10, 20, 30, 40, 50];
+
+            const sum = numbers.reduce(
+                (total, num) => total + num,
+                0
+            );
+
+            document.getElementById("result").textContent = sum;
+        }
+    </script>
+</body>
+</html>
